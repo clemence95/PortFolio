@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clémence Boitelle - Portfolio</title>
     <!-- Bootstrap 5.3.3 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -39,48 +43,115 @@
     <!-- Section À propos avec une photo animée -->
     <section id="about" class="container mt-5 text-center">
         <h2 class="text-center">À propos de moi</h2>
-        <img src="/assets/images/thumbnail_FB_IMG_1726483775830.jpg" class="rounded-circle img-fluid animate-photo" alt="Photo de Clémence Boitelle" width="200" height="200">
-        <p class="text-center mt-3">Je suis développeuse d'applications passionnée, ayant évolué dans différents projets et technologies, notamment Symfony, Java et PHP.</p>
+        <img src="/assets/images/thumbnail_FB_IMG_1726483775830.jpg" class="rounded-circle img-fluid animate-photo"
+            alt="Photo de Clémence Boitelle" width="200" height="200">
+        <p class="text-center mt-3">
+            Après une expérience en tant que téléconseillère, où j'ai développé des compétences en gestion client et
+            communication, je suis actuellement en reconversion pour obtenir le titre de Conceptrice Développeuse
+            d'Applications. Passionnée par la technologie, je me spécialise dans le développement d'applications en
+            utilisant des technologies comme Symfony, Java, et PHP.
+        </p>
+
     </section>
 
-    <!-- Section Compétences -->
+    <!-- Section Compétences Techniques avec effet de grossissement -->
     <section id="competences" class="container mt-5">
         <h2 class="text-center">Compétences Techniques</h2>
         <div class="row">
+            <!-- Colonne 1 -->
             <div class="col-md-6">
                 <ul class="list-group">
+                    <li class="list-group-item">
+                        <span class="text-warning animate-zoom fw-bold">HTML</span>,
+                        <span class="text-info animate-zoom fw-bold">CSS</span>,
+                        <span class="text-success animate-zoom fw-bold">JavaScript</span> - Développement Front-end
+                    </li>
+                    <li class="list-group-item">
+                        <span class="text-primary animate-zoom fw-bold">PHP</span>,
+                        <span class="text-dark animate-zoom fw-bold">Symfony</span> - Développement Back-end
+                    </li>
                     <li class="list-group-item">Sécurisation des applications (JWT, hachage des mots de passe)</li>
                     <li class="list-group-item">Modélisation UML et conception de bases de données</li>
                 </ul>
             </div>
+            <!-- Colonne 2 -->
             <div class="col-md-6">
                 <ul class="list-group">
-                    <li class="list-group-item">Développement full-stack : HTML, CSS, JavaScript, PHP, Symfony</li>
                     <li class="list-group-item">Création et consommation d'API REST</li>
+                    <li class="list-group-item">
+                        <span class="text-danger animate-zoom fw-bold">PHPUnit</span> - Tests unitaires
+                    </li>
+                    <li class="list-group-item">
+                        Utilisation d'outils de versionnement (<span
+                            class="text-danger animate-zoom fw-bold">Git</span>, GitHub)
+                    </li>
+                    <li class="list-group-item">Environnements de développement (Visual Studio Code, Linux, Windows)
+                    </li>
                 </ul>
             </div>
         </div>
     </section>
-
-    <!-- Section Projets -->
+    <!-- Section Projets avec ligne verticale et points -->
     <section id="projects" class="container mt-5">
         <h2 class="text-center">Projets</h2>
         <div class="row">
+            <!-- Colonne du projet GestionCommerciale -->
             <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title">GestionCommerciale</h3>
-                        <p class="card-text">Développement d'une application Java consommant les API du projet Symfony "VillageGreen".</p>
-                    </div>
-                </div>
+                <h3>GestionCommerciale</h3>
+                <ul class="timeline">
+                    <li>
+                        <strong>Objectif :</strong> Développer une application de gestion commerciale en Java en
+                        consommant des API Symfony pour la gestion des produits et des commandes.
+                    </li>
+                    <li>
+                        <strong>Technologies utilisées :</strong> Java, JavaFX, Symfony, API REST
+                    </li>
+                    <li>
+                        <strong>Contribution :</strong> J'ai conçu l'interface utilisateur en JavaFX, intégré les API,
+                        et implémenté les fonctionnalités CRUD pour la gestion des commandes.
+                    </li>
+                    <li>
+                        <strong>Défis :</strong> J'ai dû sécuriser les échanges de données entre l'application et les
+                        API, et j'ai implémenté des tests unitaires pour valider les interactions avec l'API.
+                    </li>
+                    <li>
+                        <strong>Résultat :</strong> L'application fonctionne et est utilisée pour la gestion commerciale
+                        au sein du projet "VillageGreen".
+                    </li>
+                </ul>
             </div>
+
+            <!-- Colonne du projet VillageGreen -->
             <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title">VillageGreen</h3>
-                        <p class="card-text">Développement d'une plateforme e-commerce complète utilisant Symfony et MySQL.</p>
-                    </div>
-                </div>
+                <h3>VillageGreen</h3>
+                <ul class="timeline">
+                    <li>
+                        <strong>Étape 1 : Conception du Dictionnaire de Données</strong><br>
+                        Conçu le dictionnaire de données pour organiser les informations relatives aux produits,
+                        utilisateurs, commandes, et paiements. Cette étape a structuré efficacement la base de données
+                        et optimisé les requêtes.
+                    </li>
+                    <li>
+                        <strong>Étape 2 : Création des Diagrammes</strong><br>
+                        Réalisé des diagrammes UML pour représenter les relations entre les entités et faciliter la
+                        conception de la base de données et des API REST.
+                    </li>
+                    <li>
+                        <strong>Étape 3 : Maquettage</strong><br>
+                        Conçu les maquettes du site, incluant les interfaces utilisateurs pour la gestion du panier et
+                        des commandes, en fonction des besoins fonctionnels du client.
+                    </li>
+                    <li>
+                        <strong>Étape 4 : Développement Frontend</strong><br>
+                        Développé le frontend en utilisant HTML, CSS et JavaScript, avec un focus particulier sur
+                        l'expérience utilisateur pour la gestion du panier et des commandes.
+                    </li>
+                    <li>
+                        <strong>Étape 5 : Développement Backend</strong><br>
+                        Développé le backend avec Symfony pour gérer la base de données, les commandes, et
+                        l'authentification. Intégré les API REST et sécurisé les données avec JWT.
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -105,12 +176,18 @@
         </form>
     </section>
 
+
     <footer class="bg-dark text-white text-center py-3 mt-5">
         <p>© 2024 Clémence Boitelle</p>
     </footer>
 
     <!-- Bootstrap 5.3.3 JS et Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-QtwZOwVo/gPvmyJxIfgXltdEzD+KNfZzPpc7Txz7LL+ckvcdAbVjZeoFOS0zZNid" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-R2oA5wqDeTSi5zQv/6F1uFu+Tf9bpPeS7JbB3p1zISgGHjQdmhHjEJmI2ROUbB6l" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-QtwZOwVo/gPvmyJxIfgXltdEzD+KNfZzPpc7Txz7LL+ckvcdAbVjZeoFOS0zZNid"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-R2oA5wqDeTSi5zQv/6F1uFu+Tf9bpPeS7JbB3p1zISgGHjQdmhHjEJmI2ROUbB6l"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
