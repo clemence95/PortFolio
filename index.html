@@ -1,45 +1,128 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Clémence Boitelle</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Clémence Boitelle - Portfolio</title>
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body>
-    <header>
-        <h1>Clémence Boitelle</h1>
-        <p>Développeuse d'applications</p>
-    </header>
 
-    <section id="projets">
-        <h2>Mes Projets</h2>
-        <div class="project">
-            <h3>GestionCommerciale</h3>
-            <p>Application Java consommant une API Symfony pour gérer les commandes, produits et clients.</p>
-            <a href="#">Voir le projet</a>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#competences">Compétences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projets</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Me contacter</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="project">
-            <h3>VillageGreen</h3>
-            <p>Plateforme e-commerce complète utilisant Symfony, MySQL et Bootstrap.</p>
-            <a href="#">Voir le projet</a>
+    </nav>
+
+    <!-- Section À propos avec une photo -->
+    <section id="about" class="container mt-5 text-center">
+        <h2 class="text-center">À propos de moi</h2>
+        <img src="assets/images/ma-photo.jpg" class="rounded-circle img-fluid" alt="Photo de Clémence Boitelle"
+            width="200" height="200">
+        <p class="text-center mt-3">Je suis développeuse d'applications passionnée, ayant évolué dans différents projets
+            et technologies, notamment Symfony, Java et PHP.</p>
+    </section>
+
+
+    <!-- Section Compétences -->
+    <section id="competences" class="container mt-5">
+        <h2 class="text-center">Compétences Techniques</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <ul class="list-group">
+                    <li class="list-group-item">Sécurisation des applications (JWT, hachage des mots de passe)</li>
+                    <li class="list-group-item">Modélisation UML et conception de bases de données</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="list-group">
+                    <li class="list-group-item">Développement full-stack : HTML, CSS, JavaScript, PHP, Symfony</li>
+                    <li class="list-group-item">Création et consommation d'API REST</li>
+                </ul>
+            </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contactez-moi</h2>
-        <form action="contact.php" method="POST">
-            <label for="name">Nom</label>
-            <input type="text" id="name" name="name" required>
+    <!-- Section Projets -->
+    <section id="projects" class="container mt-5">
+        <h2 class="text-center">Projets</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">GestionCommerciale</h3>
+                        <p class="card-text">Développement d'une application Java consommant les API du projet Symfony
+                            "VillageGreen".</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">VillageGreen</h3>
+                        <p class="card-text">Développement d'une plateforme e-commerce complète utilisant Symfony et
+                            MySQL.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit">Envoyer</button>
+    <!-- Section Contact -->
+    <section id="contact" class="container mt-5">
+        <h2 class="text-center">Contactez-moi</h2>
+        <form action="contact.php" method="POST" class="mt-4">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
         </form>
     </section>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>© 2024 Clémence Boitelle</p>
+    </footer>
+
+    <!-- Bootstrap 5.3.3 JS et Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-QtwZOwVo/gPvmyJxIfgXltdEzD+KNfZzPpc7Txz7LL+ckvcdAbVjZeoFOS0zZNid"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-R2oA5wqDeTSi5zQv/6F1uFu+Tf9bpPeS7JbB3p1zISgGHjQdmhHjEJmI2ROUbB6l"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
