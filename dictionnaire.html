@@ -40,17 +40,72 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td>id</td><td>INT</td><td>PRIMARY KEY, NOT NULL</td><td>Identifiant unique du produit</td></tr>
-                <tr><td>libelleCourt</td><td>VARCHAR</td><td>NOT NULL</td><td>Libellé court du produit</td></tr>
-                <tr><td>libelleLong</td><td>VARCHAR</td><td></td><td>Description longue du produit</td></tr>
-                <tr><td>referenceFournisseur</td><td>VARCHAR</td><td></td><td>Référence fournisseur du produit</td></tr>
-                <tr><td>prixAchat</td><td>FLOAT</td><td>NOT NULL</td><td>Prix d'achat du produit</td></tr>
-                <tr><td>prixVente</td><td>FLOAT</td><td></td><td>Prix de vente calculé</td></tr>
-                <tr><td>stock</td><td>INT</td><td></td><td>Quantité en stock</td></tr>
-                <tr><td>actif</td><td>BOOLEAN</td><td>NOT NULL</td><td>Indique si le produit est actif</td></tr>
-                <tr><td>photo</td><td>VARCHAR</td><td></td><td>Lien ou chemin de l'image du produit</td></tr>
-                <tr><td>categorie_id</td><td>INT</td><td>FOREIGN KEY (Categorie)</td><td>Référence vers la catégorie</td></tr>
-                <tr><td>fournisseur_id</td><td>INT</td><td>FOREIGN KEY (Fournisseur)</td><td>Référence vers le fournisseur</td></tr>
+                <tr>
+                    <td>id</td>
+                    <td>INT</td>
+                    <td>PRIMARY KEY, NOT NULL</td>
+                    <td>Identifiant unique du produit</td>
+                </tr>
+                <tr>
+                    <td>libelleCourt</td>
+                    <td>VARCHAR</td>
+                    <td>NOT NULL</td>
+                    <td>Libellé court du produit</td>
+                </tr>
+                <tr>
+                    <td>libelleLong</td>
+                    <td>VARCHAR</td>
+                    <td></td>
+                    <td>Description longue du produit</td>
+                </tr>
+                <tr>
+                    <td>referenceFournisseur</td>
+                    <td>VARCHAR</td>
+                    <td></td>
+                    <td>Référence fournisseur du produit</td>
+                </tr>
+                <tr>
+                    <td>prixAchat</td>
+                    <td>FLOAT</td>
+                    <td>NOT NULL</td>
+                    <td>Prix d'achat du produit</td>
+                </tr>
+                <tr>
+                    <td>prixVente</td>
+                    <td>FLOAT</td>
+                    <td></td>
+                    <td>Prix de vente calculé</td>
+                </tr>
+                <tr>
+                    <td>stock</td>
+                    <td>INT</td>
+                    <td></td>
+                    <td>Quantité en stock</td>
+                </tr>
+                <tr>
+                    <td>actif</td>
+                    <td>BOOLEAN</td>
+                    <td>NOT NULL</td>
+                    <td>Indique si le produit est actif</td>
+                </tr>
+                <tr>
+                    <td>photo</td>
+                    <td>VARCHAR</td>
+                    <td></td>
+                    <td>Lien ou chemin de l'image du produit</td>
+                </tr>
+                <tr>
+                    <td>categorie_id</td>
+                    <td>INT</td>
+                    <td>FOREIGN KEY (Categorie)</td>
+                    <td>Référence vers la catégorie</td>
+                </tr>
+                <tr>
+                    <td>fournisseur_id</td>
+                    <td>INT</td>
+                    <td>FOREIGN KEY (Fournisseur)</td>
+                    <td>Référence vers le fournisseur</td>
+                </tr>
             </tbody>
         </table>
 
@@ -66,14 +121,54 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td>id</td><td>INT</td><td>PRIMARY KEY, NOT NULL</td><td>Identifiant unique du fournisseur</td></tr>
-                <tr><td>nomEntreprise</td><td>VARCHAR</td><td>NOT NULL</td><td>Nom de l'entreprise du fournisseur</td></tr>
-                <tr><td>contact</td><td>VARCHAR</td><td></td><td>Nom de la personne contact</td></tr>
-                <tr><td>telephone</td><td>VARCHAR</td><td></td><td>Numéro de téléphone du fournisseur</td></tr>
-                <tr><td>siret</td><td>VARCHAR</td><td></td><td>SIRET de l'entreprise</td></tr>
-                <tr><td>importateur</td><td>BOOLEAN</td><td></td><td>Indique si l'entreprise est importateur</td></tr>
-                <tr><td>fabricant</td><td>BOOLEAN</td><td></td><td>Indique si l'entreprise est fabricant</td></tr>
-                <tr><td>adresse_id</td><td>INT</td><td>FOREIGN KEY (Adresse)</td><td>Référence vers l'adresse du fournisseur</td></tr>
+                <tr>
+                    <td>id</td>
+                    <td>INT</td>
+                    <td>PRIMARY KEY, NOT NULL</td>
+                    <td>Identifiant unique du fournisseur</td>
+                </tr>
+                <tr>
+                    <td>nomEntreprise</td>
+                    <td>VARCHAR</td>
+                    <td>NOT NULL</td>
+                    <td>Nom de l'entreprise du fournisseur</td>
+                </tr>
+                <tr>
+                    <td>contact</td>
+                    <td>VARCHAR</td>
+                    <td></td>
+                    <td>Nom de la personne contact</td>
+                </tr>
+                <tr>
+                    <td>telephone</td>
+                    <td>VARCHAR</td>
+                    <td></td>
+                    <td>Numéro de téléphone du fournisseur</td>
+                </tr>
+                <tr>
+                    <td>siret</td>
+                    <td>VARCHAR</td>
+                    <td></td>
+                    <td>SIRET de l'entreprise</td>
+                </tr>
+                <tr>
+                    <td>importateur</td>
+                    <td>BOOLEAN</td>
+                    <td></td>
+                    <td>Indique si l'entreprise est importateur</td>
+                </tr>
+                <tr>
+                    <td>fabricant</td>
+                    <td>BOOLEAN</td>
+                    <td></td>
+                    <td>Indique si l'entreprise est fabricant</td>
+                </tr>
+                <tr>
+                    <td>adresse_id</td>
+                    <td>INT</td>
+                    <td>FOREIGN KEY (Adresse)</td>
+                    <td>Référence vers l'adresse du fournisseur</td>
+                </tr>
             </tbody>
         </table>
 
@@ -89,10 +184,30 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td>id</td><td>INT</td><td>PRIMARY KEY, NOT NULL</td><td>Identifiant unique de la catégorie</td></tr>
-                <tr><td>nom</td><td>VARCHAR</td><td>NOT NULL</td><td>Nom de la catégorie</td></tr>
-                <tr><td>image</td><td>VARCHAR</td><td></td><td>Lien ou chemin de l'image de la catégorie</td></tr>
-                <tr><td>parent_id</td><td>INT</td><td>FOREIGN KEY (Categorie)</td><td>Référence vers la catégorie parent</td></tr>
+                <tr>
+                    <td>id</td>
+                    <td>INT</td>
+                    <td>PRIMARY KEY, NOT NULL</td>
+                    <td>Identifiant unique de la catégorie</td>
+                </tr>
+                <tr>
+                    <td>nom</td>
+                    <td>VARCHAR</td>
+                    <td>NOT NULL</td>
+                    <td>Nom de la catégorie</td>
+                </tr>
+                <tr>
+                    <td>image</td>
+                    <td>VARCHAR</td>
+                    <td></td>
+                    <td>Lien ou chemin de l'image de la catégorie</td>
+                </tr>
+                <tr>
+                    <td>parent_id</td>
+                    <td>INT</td>
+                    <td>FOREIGN KEY (Categorie)</td>
+                    <td>Référence vers la catégorie parent</td>
+                </tr>
             </tbody>
         </table>
 
@@ -108,21 +223,96 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td>id</td><td>INT</td><td>PRIMARY KEY, NOT NULL</td><td>Identifiant unique du client</td></tr>
-                <tr><td>email</td><td>VARCHAR</td><td>UNIQUE, NOT NULL</td><td>Email du client</td></tr>
-                <tr><td>roles</td><td>JSON</td><td>NOT NULL</td><td>Rôles du client</td></tr>
-                <tr><td>password</td><td>VARCHAR</td><td>NOT NULL</td><td>Mot de passe du client</td></tr>
-                <tr><td>nom</td><td>VARCHAR</td><td>NOT NULL</td><td>Nom du client</td></tr>
-                <tr><td>prenom</td><td>VARCHAR</td><td>NOT NULL</td><td>Prénom du client</td></tr>
-                <tr><td>siret</td><td>VARCHAR</td><td></td><td>SIRET (pour les clients professionnels)</td></tr>
-                <tr><td>entreprise</td><td>VARCHAR</td><td></td><td>Nom de l'entreprise</td></tr>
-                <tr><td>reference_client</td><td>VARCHAR</td><td>UNIQUE, NOT NULL</td><td>Référence client</td></tr>
-                <tr><td>coefficientParticulier</td><td>FLOAT</td><td></td><td>Coefficient de vente pour particuliers</td></tr>
-                <tr><td>coefficientProfessionnel</td><td>FLOAT</td><td></td><td>Coefficient de vente pour professionnels</td></tr>
-                <tr><td>telephone</td><td>VARCHAR</td><td></td><td>Numéro de téléphone</td></tr>
-                <tr><td>type_client</td><td>VARCHAR</td><td>NOT NULL</td><td>Type du client (Particulier/Professionnel)</td></tr>
-                <tr><td>confirmationToken</td><td>VARCHAR</td><td></td><td>Jeton de confirmation d'email</td></tr>
-                <tr><td>isEmailConfirmed</td><td>BOOLEAN</td><td></td><td>Statut de la confirmation d'email</td></tr>
+                <tr>
+                    <td>id</td>
+                    <td>INT</td>
+                    <td>PRIMARY KEY, NOT NULL</td>
+                    <td>Identifiant unique du client</td>
+                </tr>
+                <tr>
+                    <td>email</td>
+                    <td>VARCHAR</td>
+                    <td>UNIQUE, NOT NULL</td>
+                    <td>Email du client</td>
+                </tr>
+                <tr>
+                    <td>roles</td>
+                    <td>JSON</td>
+                    <td>NOT NULL</td>
+                    <td>Rôles du client</td>
+                </tr>
+                <tr>
+                    <td>password</td>
+                    <td>VARCHAR</td>
+                    <td>NOT NULL</td>
+                    <td>Mot de passe du client</td>
+                </tr>
+                <tr>
+                    <td>nom</td>
+                    <td>VARCHAR</td>
+                    <td>NOT NULL</td>
+                    <td>Nom du client</td>
+                </tr>
+                <tr>
+                    <td>prenom</td>
+                    <td>VARCHAR</td>
+                    <td>NOT NULL</td>
+                    <td>Prénom du client</td>
+                </tr>
+                <tr>
+                    <td>siret</td>
+                    <td>VARCHAR</td>
+                    <td></td>
+                    <td>SIRET (pour les clients professionnels)</td>
+                </tr>
+                <tr>
+                    <td>entreprise</td>
+                    <td>VARCHAR</td>
+                    <td></td>
+                    <td>Nom de l'entreprise</td>
+                </tr>
+                <tr>
+                    <td>reference_client</td>
+                    <td>VARCHAR</td>
+                    <td>UNIQUE, NOT NULL</td>
+                    <td>Référence client</td>
+                </tr>
+                <tr>
+                    <td>coefficientParticulier</td>
+                    <td>FLOAT</td>
+                    <td></td>
+                    <td>Coefficient de vente pour particuliers</td>
+                </tr>
+                <tr>
+                    <td>coefficientProfessionnel</td>
+                    <td>FLOAT</td>
+                    <td></td>
+                    <td>Coefficient de vente pour professionnels</td>
+                </tr>
+                <tr>
+                    <td>telephone</td>
+                    <td>VARCHAR</td>
+                    <td></td>
+                    <td>Numéro de téléphone</td>
+                </tr>
+                <tr>
+                    <td>type_client</td>
+                    <td>VARCHAR</td>
+                    <td>NOT NULL</td>
+                    <td>Type du client (Particulier/Professionnel)</td>
+                </tr>
+                <tr>
+                    <td>confirmationToken</td>
+                    <td>VARCHAR</td>
+                    <td></td>
+                    <td>Jeton de confirmation d'email</td>
+                </tr>
+                <tr>
+                    <td>isEmailConfirmed</td>
+                    <td>BOOLEAN</td>
+                    <td></td>
+                    <td>Statut de la confirmation d'email</td>
+                </tr>
             </tbody>
         </table>
 
@@ -138,17 +328,72 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td>id</td><td>INT</td><td>PRIMARY KEY, NOT NULL</td><td>Identifiant unique de la commande</td></tr>
-                <tr><td>dateCommande</td><td>DATETIME</td><td>NOT NULL</td><td>Date de la commande</td></tr>
-                <tr><td>statut</td><td>VARCHAR</td><td>NOT NULL</td><td>Statut de la commande</td></tr>
-                <tr><td>montantTotal</td><td>FLOAT</td><td>NOT NULL</td><td>Montant total de la commande</td></tr>
-                <tr><td>reductionSupplementaire</td><td>FLOAT</td><td></td><td>Réduction supplémentaire appliquée</td></tr>
-                <tr><td>modePaiement</td><td>VARCHAR</td><td>NOT NULL</td><td>Mode de paiement (virement, chèque)</td></tr>
-                <tr><td>informationReglement</td><td>TEXT</td><td></td><td>Informations sur le règlement</td></tr>
-                <tr><td>adresse_livraison_id</td><td>INT</td><td>FOREIGN KEY (Adresse)</td><td>Référence vers l'adresse de livraison</td></tr>
-                <tr><td>adresse_facturation_id</td><td>INT</td><td>FOREIGN KEY (Adresse)</td><td>Référence vers l'adresse de facturation</td></tr>
-                <tr><td>client_id</td><td>INT</td><td>FOREIGN KEY (Client)</td><td>Référence vers le client</td></tr>
-                <tr><td>employe_id</td><td>INT</td><td>FOREIGN KEY (Employe)</td><td>Référence vers le commercial</td></tr>
+                <tr>
+                    <td>id</td>
+                    <td>INT</td>
+                    <td>PRIMARY KEY, NOT NULL</td>
+                    <td>Identifiant unique de la commande</td>
+                </tr>
+                <tr>
+                    <td>dateCommande</td>
+                    <td>DATETIME</td>
+                    <td>NOT NULL</td>
+                    <td>Date de la commande</td>
+                </tr>
+                <tr>
+                    <td>statut</td>
+                    <td>VARCHAR</td>
+                    <td>NOT NULL</td>
+                    <td>Statut de la commande</td>
+                </tr>
+                <tr>
+                    <td>montantTotal</td>
+                    <td>FLOAT</td>
+                    <td>NOT NULL</td>
+                    <td>Montant total de la commande</td>
+                </tr>
+                <tr>
+                    <td>reductionSupplementaire</td>
+                    <td>FLOAT</td>
+                    <td></td>
+                    <td>Réduction supplémentaire appliquée</td>
+                </tr>
+                <tr>
+                    <td>modePaiement</td>
+                    <td>VARCHAR</td>
+                    <td>NOT NULL</td>
+                    <td>Mode de paiement (virement, chèque)</td>
+                </tr>
+                <tr>
+                    <td>informationReglement</td>
+                    <td>TEXT</td>
+                    <td></td>
+                    <td>Informations sur le règlement</td>
+                </tr>
+                <tr>
+                    <td>adresse_livraison_id</td>
+                    <td>INT</td>
+                    <td>FOREIGN KEY (Adresse)</td>
+                    <td>Référence vers l'adresse de livraison</td>
+                </tr>
+                <tr>
+                    <td>adresse_facturation_id</td>
+                    <td>INT</td>
+                    <td>FOREIGN KEY (Adresse)</td>
+                    <td>Référence vers l'adresse de facturation</td>
+                </tr>
+                <tr>
+                    <td>client_id</td>
+                    <td>INT</td>
+                    <td>FOREIGN KEY (Client)</td>
+                    <td>Référence vers le client</td>
+                </tr>
+                <tr>
+                    <td>employe_id</td>
+                    <td>INT</td>
+                    <td>FOREIGN KEY (Employe)</td>
+                    <td>Référence vers le commercial</td>
+                </tr>
             </tbody>
         </table>
 
@@ -164,10 +409,30 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td>id</td><td>INT</td><td>PRIMARY KEY, NOT NULL</td><td>Identifiant unique de la commande produit</td></tr>
-                <tr><td>quantite</td><td>INT</td><td>NOT NULL</td><td>Quantité du produit commandé</td></tr>
-                <tr><td>produit_id</td><td>INT</td><td>FOREIGN KEY (Produit)</td><td>Référence vers le produit</td></tr>
-                <tr><td>commande_id</td><td>INT</td><td>FOREIGN KEY (Commande)</td><td>Référence vers la commande</td></tr>
+                <tr>
+                    <td>id</td>
+                    <td>INT</td>
+                    <td>PRIMARY KEY, NOT NULL</td>
+                    <td>Identifiant unique de la commande produit</td>
+                </tr>
+                <tr>
+                    <td>quantite</td>
+                    <td>INT</td>
+                    <td>NOT NULL</td>
+                    <td>Quantité du produit commandé</td>
+                </tr>
+                <tr>
+                    <td>produit_id</td>
+                    <td>INT</td>
+                    <td>FOREIGN KEY (Produit)</td>
+                    <td>Référence vers le produit</td>
+                </tr>
+                <tr>
+                    <td>commande_id</td>
+                    <td>INT</td>
+                    <td>FOREIGN KEY (Commande)</td>
+                    <td>Référence vers la commande</td>
+                </tr>
             </tbody>
         </table>
 
@@ -183,13 +448,48 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td>id</td><td>INT</td><td>PRIMARY KEY, NOT NULL</td><td>Identifiant unique de l'employé</td></tr>
-                <tr><td>nom</td><td>VARCHAR</td><td>UNIQUE, NOT NULL</td><td>Nom de l'employé</td></tr>
-                <tr><td>roles</td><td>JSON</td><td>NOT NULL</td><td>Rôles de l'employé</td></tr>
-                <tr><td>password</td><td>VARCHAR</td><td>NOT NULL</td><td>Mot de passe de l'employé</td></tr>
-                <tr><td>prenom</td><td>VARCHAR</td><td>NOT NULL</td><td>Prénom de l'employé</td></tr>
-                <tr><td>email</td><td>VARCHAR</td><td>NOT NULL</td><td>Email de l'employé</td></tr>
-                <tr><td>telephone</td><td>VARCHAR</td><td></td><td>Numéro de téléphone de l'employé</td></tr>
+                <tr>
+                    <td>id</td>
+                    <td>INT</td>
+                    <td>PRIMARY KEY, NOT NULL</td>
+                    <td>Identifiant unique de l'employé</td>
+                </tr>
+                <tr>
+                    <td>nom</td>
+                    <td>VARCHAR</td>
+                    <td>UNIQUE, NOT NULL</td>
+                    <td>Nom de l'employé</td>
+                </tr>
+                <tr>
+                    <td>roles</td>
+                    <td>JSON</td>
+                    <td>NOT NULL</td>
+                    <td>Rôles de l'employé</td>
+                </tr>
+                <tr>
+                    <td>password</td>
+                    <td>VARCHAR</td>
+                    <td>NOT NULL</td>
+                    <td>Mot de passe de l'employé</td>
+                </tr>
+                <tr>
+                    <td>prenom</td>
+                    <td>VARCHAR</td>
+                    <td>NOT NULL</td>
+                    <td>Prénom de l'employé</td>
+                </tr>
+                <tr>
+                    <td>email</td>
+                    <td>VARCHAR</td>
+                    <td>NOT NULL</td>
+                    <td>Email de l'employé</td>
+                </tr>
+                <tr>
+                    <td>telephone</td>
+                    <td>VARCHAR</td>
+                    <td></td>
+                    <td>Numéro de téléphone de l'employé</td>
+                </tr>
             </tbody>
         </table>
 
@@ -200,19 +500,58 @@
                 <tr>
                     <th>Nom du champ</th>
                     <th>Type</th>
+                    <th>Longueur</th>
                     <th>Contraintes</th>
                     <th>Description</th>
                 </tr>
             </thead>
             <tbody>
-                <tr><td>id</td><td>INT</td><td>PRIMARY KEY, NOT NULL</td><td>Identifiant unique de l'adresse</td></tr>
-                <tr><td>numero_rue</td><td>VARCHAR</td><td>NOT NULL</td><td>Numéro de rue</td></tr>
-                <tr><td>rue</td><td>VARCHAR</td><td>NOT NULL</td><td>Rue</td></tr>
-                <tr><td>ville</td><td>VARCHAR</td><td>NOT NULL</td><td>Ville</td></tr>
-                <tr><td>code_postal</td><td>VARCHAR</td><td>NOT NULL</td><td>Code postal</td></tr>
-                <tr><td>pays</td><td>VARCHAR</td><td>NOT NULL</td><td>Pays</td></tr>
+                <tr>
+                    <td>id</td>
+                    <td>INT</td>
+                    <td>N/A</td>
+                    <td>PRIMARY KEY, NOT NULL</td>
+                    <td>Identifiant unique de l'adresse</td>
+                </tr>
+                <tr>
+                    <td>numero_rue</td>
+                    <td>VARCHAR</td>
+                    <td>10</td>
+                    <td>NOT NULL</td>
+                    <td>Numéro de rue</td>
+                </tr>
+                <tr>
+                    <td>rue</td>
+                    <td>VARCHAR</td>
+                    <td>255</td>
+                    <td>NOT NULL</td>
+                    <td>Rue</td>
+                </tr>
+                <tr>
+                    <td>ville</td>
+                    <td>VARCHAR</td>
+                    <td>255</td>
+                    <td>NOT NULL</td>
+                    <td>Ville</td>
+                </tr>
+                <tr>
+                    <td>code_postal</td>
+                    <td>VARCHAR</td>
+                    <td>50</td>
+                    <td>NOT NULL</td>
+                    <td>Code postal</td>
+                </tr>
+                <tr>
+                    <td>pays</td>
+                    <td>VARCHAR</td>
+                    <td>255</td>
+                    <td>NOT NULL</td>
+                    <td>Pays</td>
+                </tr>
             </tbody>
         </table>
+
+
 
         <!-- Table Document -->
         <h3 class="mt-5">Table : Document</h3>
@@ -226,11 +565,36 @@
                 </tr>
             </thead>
             <tbody>
-                <tr><td>id</td><td>INT</td><td>PRIMARY KEY, NOT NULL</td><td>Identifiant unique du document</td></tr>
-                <tr><td>type</td><td>VARCHAR</td><td>NOT NULL</td><td>Type de document (bon, facture, etc.)</td></tr>
-                <tr><td>dateCreation</td><td>DATETIME</td><td>NOT NULL</td><td>Date de création du document</td></tr>
-                <tr><td>fileName</td><td>VARCHAR</td><td></td><td>Nom du fichier associé au document</td></tr>
-                <tr><td>commande_id</td><td>INT</td><td>FOREIGN KEY (Commande)</td><td>Référence vers la commande</td></tr>
+                <tr>
+                    <td>id</td>
+                    <td>INT</td>
+                    <td>PRIMARY KEY, NOT NULL</td>
+                    <td>Identifiant unique du document</td>
+                </tr>
+                <tr>
+                    <td>type</td>
+                    <td>VARCHAR</td>
+                    <td>NOT NULL</td>
+                    <td>Type de document (bon, facture, etc.)</td>
+                </tr>
+                <tr>
+                    <td>dateCreation</td>
+                    <td>DATETIME</td>
+                    <td>NOT NULL</td>
+                    <td>Date de création du document</td>
+                </tr>
+                <tr>
+                    <td>fileName</td>
+                    <td>VARCHAR</td>
+                    <td></td>
+                    <td>Nom du fichier associé au document</td>
+                </tr>
+                <tr>
+                    <td>commande_id</td>
+                    <td>INT</td>
+                    <td>FOREIGN KEY (Commande)</td>
+                    <td>Référence vers la commande</td>
+                </tr>
             </tbody>
         </table>
 
@@ -250,5 +614,3 @@
 </body>
 
 </html>
-
-
