@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clémence Boitelle - Portfolio</title>
     <!-- Bootstrap 5.3.3 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
+
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -36,12 +40,31 @@
         </div>
     </nav>
 
-    <!-- Section À propos avec une photo animée -->
-    <section id="about" class="container mt-5 text-center">
-        <h2 class="text-center">À propos de moi</h2>
-        <img src="/assets/images/thumbnail_FB_IMG_1726483775830.jpg" class="rounded-circle img-fluid animate-photo" alt="Photo de Clémence Boitelle" width="200" height="200">
-        <p class="text-center mt-3">Je suis développeuse d'applications passionnée, ayant évolué dans différents projets et technologies, notamment Symfony, Java et PHP.</p>
+    <!-- Section À propos avec une photo animée et une meilleure présentation -->
+    <section id="about" class="container mt-5">
+        <div class="row align-items-center">
+            <!-- Colonne pour la photo -->
+            <div class="col-md-4 text-center">
+                <img src="/assets/images/thumbnail_FB_IMG_1726483775830.jpg"
+                    class="rounded-circle img-fluid animate-photo mb-3" alt="Photo de Clémence Boitelle" width="200"
+                    height="200">
+            </div>
+
+            <!-- Colonne pour le texte -->
+            <div class="col-md-8">
+                <h2 class="text-center text-md-start">À propos de moi</h2>
+                <h4 class="text-center text-md-start text-primary">Clémence Boitelle</h4>
+                <p class="text-muted text-center text-md-start">Développeuse d'applications</p>
+                <p class="text-justify mt-3">Je suis passionnée par le développement d'applications, avec une expérience
+                    solide dans des projets variés, notamment en utilisant <strong>Symfony</strong>,
+                    <strong>Java</strong>, et <strong>PHP</strong>. J'adore résoudre des problèmes techniques complexes
+                    et créer des solutions qui impactent positivement les utilisateurs. Mon engagement dans
+                    l'apprentissage continu et ma curiosité me permettent de rester à jour avec les dernières
+                    technologies.</p>
+            </div>
+        </div>
     </section>
+
 
     <!-- Section Compétences -->
     <section id="competences" class="container mt-5">
@@ -70,7 +93,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h3 class="card-title">GestionCommerciale</h3>
-                        <p class="card-text">Développement d'une application Java consommant les API du projet Symfony "VillageGreen".</p>
+                        <p class="card-text">Développement d'une application Java consommant les API du projet Symfony
+                            "VillageGreen".</p>
                     </div>
                 </div>
             </div>
@@ -78,7 +102,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h3 class="card-title">VillageGreen</h3>
-                        <p class="card-text">Développement d'une plateforme e-commerce complète utilisant Symfony et MySQL.</p>
+                        <p class="card-text">Développement d'une plateforme e-commerce complète utilisant Symfony et
+                            MySQL.</p>
                     </div>
                 </div>
             </div>
@@ -110,7 +135,12 @@
     </footer>
 
     <!-- Bootstrap 5.3.3 JS et Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-QtwZOwVo/gPvmyJxIfgXltdEzD+KNfZzPpc7Txz7LL+ckvcdAbVjZeoFOS0zZNid" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-R2oA5wqDeTSi5zQv/6F1uFu+Tf9bpPeS7JbB3p1zISgGHjQdmhHjEJmI2ROUbB6l" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-QtwZOwVo/gPvmyJxIfgXltdEzD+KNfZzPpc7Txz7LL+ckvcdAbVjZeoFOS0zZNid"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-R2oA5wqDeTSi5zQv/6F1uFu+Tf9bpPeS7JbB3p1zISgGHjQdmhHjEJmI2ROUbB6l"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
