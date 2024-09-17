@@ -10,6 +10,8 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Font Awesome 6.6.0 CSS pour les icônes, inclus pour ajouter des icônes dans la page -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <meta name="google-translate-customization" content="your-customization-id">
+    </meta>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -23,7 +25,8 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <!-- Centrer les liens avec d-flex et justify-content-center -->
+                <ul class="navbar-nav d-flex justify-content-center w-100">
                     <li class="nav-item">
                         <a class="nav-link" href="#about">À propos</a>
                     </li>
@@ -37,10 +40,15 @@
                         <a class="nav-link" href="#contact">Me contacter</a>
                     </li>
                 </ul>
+                <!-- Sélecteur de langue Google Translate à droite -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <div id="google_translate_element"></div>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
-
 
     <!-- Section À propos avec une photo animée et une meilleure présentation -->
     <section id="about" class="container mt-5">
@@ -134,7 +142,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- Section Projets avec ligne verticale et points -->
     <section id="projects" class="container mt-5">
@@ -244,6 +251,13 @@
         <p>© 2024 Clémence Boitelle</p>
     </footer>
 
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'fr', includedLanguages: 'en,es,de,it' }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <!-- Bootstrap 5.3.3 JS et Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

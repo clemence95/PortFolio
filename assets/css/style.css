@@ -110,3 +110,36 @@ footer {
     font-size: 1.5rem;
     color: #3498db; /* Couleur des points */
 }
+/* Cacher le logo Google Translate pour un look plus épuré */
+.goog-logo-link {
+    display: none !important;
+}
+
+/* Cacher les options supplémentaires sous le sélecteur */
+.goog-te-gadget {
+    color: transparent !important;
+}
+
+/* Styliser le menu déroulant pour correspondre à ton design */
+#google_translate_element select {
+    background-color: #343a40; /* Couleur de fond sombre */
+    color: #fff; /* Couleur du texte blanche */
+    border: none;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    appearance: none;
+}
+
+/* Ajouter une icône pour indiquer un sélecteur de langue */
+#google_translate_element select:before {
+    content: "\f0ac"; /* Icône Font Awesome pour le globe */
+    font-family: FontAwesome;
+    color: #fff;
+    margin-right: 10px;
+}
+
+/* Ajuster la taille */
+#google_translate_element {
+    margin-top: 10px;
+}
