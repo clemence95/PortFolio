@@ -110,15 +110,6 @@ footer {
     font-size: 1.5rem;
     color: #3498db; /* Couleur des points */
 }
-/* Cacher le logo Google Translate pour un look plus épuré */
-.goog-logo-link {
-    display: none !important;
-}
-
-/* Cacher les options supplémentaires sous le sélecteur */
-.goog-te-gadget {
-    color: transparent !important;
-}
 
 /* Styliser le menu déroulant pour correspondre à ton design */
 #google_translate_element select {
