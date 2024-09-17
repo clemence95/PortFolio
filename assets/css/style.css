@@ -13,7 +13,8 @@ nav {
 }
 
 /* Ajustement de la marge supérieure */
-header, section {
+header,
+section {
     margin-top: 70px;
 }
 
@@ -23,6 +24,7 @@ header, section {
         opacity: 0;
         transform: scale(0.8);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
@@ -59,4 +61,51 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* Animation de zoom au survol */
+.animate-zoom {
+    display: inline-block;
+    font-weight: bold;
+    /* Gras avec Bootstrap */
+    transition: transform 0.3s ease;
+    /* Transition fluide */
+}
+
+/* Effet de grossissement au survol */
+.animate-zoom:hover {
+    transform: scale(1.2);
+    /* Grossissement de 20% */
+}
+
+/* Style pour la timeline (ligne verticale avec des points) */
+.timeline {
+    list-style: none;
+    position: relative;
+    padding-left: 20px; /* Espace pour la ligne */
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10px;
+    height: 100%;
+    width: 2px;
+    background-color: #3498db; /* Couleur de la ligne verticale */
+}
+
+.timeline li {
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.timeline li::before {
+    content: '●';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.5rem;
+    color: #3498db; /* Couleur des points */
 }
