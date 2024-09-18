@@ -77,7 +77,6 @@
         </ul>
     </section>
 
-
     <!-- Section Dictionnaire de Données -->
     <section class="container mt-5">
 
@@ -124,9 +123,9 @@
                 </tr>
                 <tr>
                     <td><span class="text-primary">prixVente</span></td>
-                    <td>DECIMAL(10, 2)</td>
-                    <td><span class="badge bg-info text-dark">CHECK(prixVente >= 0)</span></td>
-                    <td>Prix de vente calculé</td>
+                    <td>Calculé dynamiquement</td>
+                    <td>Calculé à partir du prix d'achat et du coefficient client</td>
+                    <td>Le prix de vente TTC est calculé automatiquement lors des commandes.</td>
                 </tr>
                 <tr>
                     <td><span class="text-primary">stock</span></td>
@@ -160,7 +159,7 @@
                 </tr>
             </tbody>
         </table>
-
+    
         <h4 class="mt-4 text-primary">Explication des champs :</h4>
         <ul>
             <li><strong><span class="text-success">id (INT, PRIMARY KEY, NOT NULL)</span> :</strong> L'identifiant
@@ -176,9 +175,8 @@
             <li><strong><span class="text-success">prixAchat (DECIMAL(10, 2), NOT NULL, CHECK(prixAchat >= 0))</span>
                     :</strong> `DECIMAL(10, 2)` assure une précision sur les montants financiers. La contrainte `CHECK`
                 empêche l'insertion de valeurs négatives pour ce champ.</li>
-            <li><strong><span class="text-success">prixVente (DECIMAL(10, 2), CHECK(prixVente >= 0))</span> :</strong>
-                Même logique que pour `prixAchat`, ce champ stocke le prix de vente du produit avec deux décimales et la
-                contrainte `CHECK` empêche les valeurs négatives.</li>
+            <li><strong><span class="text-success">prixVente</span> :</strong> Le prix de vente est calculé
+                dynamiquement en fonction du prix d'achat, du coefficient client, et du taux de TVA.</li>
             <li><strong><span class="text-success">stock (INT, CHECK(stock >= 0))</span> :</strong> Représente la
                 quantité disponible du produit en entier. La contrainte `CHECK` garantit que le stock ne soit jamais
                 négatif.</li>
@@ -193,7 +191,25 @@
                 même, chaque produit doit avoir un fournisseur, et cette relation est définie par une clé étrangère.
             </li>
         </ul>
+    
+        <h4 class="mt-4 text-primary">Méthode de calcul du prix de vente :</h4>
+        <p>La méthode <strong>calculerPrixVenteTTC()</strong> calcule le prix de vente en fonction du prix d'achat, du coefficient du client et du taux de TVA.</p>
+    
+        <pre><code>
+    public function calculerPrixVenteTTC(float $tauxTVA = 0.2): string
+    {
+        // Obtient le coefficient du client
+        $coefficient = $this->getClientCoefficient();
+    
+        // Calcul du prix hors taxe
+        $prixHT = bcmul($this->prixAchat, $coefficient, 2);
+    
+        // Calcul du prix avec TVA
+        return bcmul($prixHT, (string)(1 + $tauxTVA), 2);
+    }
+        </code></pre>
 
+        
         <h3 class="mt-5 text-primary">Table : Fournisseur</h3>
         <table class="table table-striped table-bordered">
             <thead class="table-dark">
