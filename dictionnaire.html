@@ -80,9 +80,8 @@
 
     <!-- Section Dictionnaire de Données -->
     <section class="container mt-5">
-        <h2 class="text-center">Dictionnaire de Données</h2>
 
-        <h3 class="mt-5">Table : Produit</h3>
+        <h3 class="mt-5 text-primary">Table : Produit</h3>
         <table class="table table-striped table-bordered">
             <thead class="table-dark">
                 <tr>
@@ -162,7 +161,7 @@
             </tbody>
         </table>
 
-        <p><strong>Explication des choix :</strong></p>
+        <h4 class="mt-4 text-primary">Explication des champs :</h4>
         <ul>
             <li><strong><span class="text-success">id (INT, PRIMARY KEY, NOT NULL)</span> :</strong> L'identifiant
                 unique du produit, utilisé pour différencier chaque enregistrement dans la base de données.</li>
@@ -195,10 +194,9 @@
             </li>
         </ul>
 
-        <!-- Table Fournisseur -->
-        <h3 class="mt-5">Table : Fournisseur</h3>
-        <table class="table table-striped">
-            <thead>
+        <h3 class="mt-5 text-primary">Table : Fournisseur</h3>
+        <table class="table table-striped table-bordered">
+            <thead class="table-dark">
                 <tr>
                     <th>Nom du champ</th>
                     <th>Type</th>
@@ -208,55 +206,76 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>id</td>
+                    <td><span class="text-primary">id</span></td>
                     <td>INT</td>
-                    <td>PRIMARY KEY, NOT NULL</td>
+                    <td><span class="badge bg-warning text-dark">PRIMARY KEY</span>, NOT NULL</td>
                     <td>Identifiant unique du fournisseur</td>
                 </tr>
                 <tr>
-                    <td>nomEntreprise</td>
-                    <td>VARCHAR</td>
+                    <td><span class="text-primary">nomEntreprise</span></td>
+                    <td>VARCHAR(255)</td>
                     <td>NOT NULL</td>
                     <td>Nom de l'entreprise du fournisseur</td>
                 </tr>
                 <tr>
-                    <td>contact</td>
-                    <td>VARCHAR</td>
-                    <td></td>
-                    <td>Nom de la personne contact</td>
+                    <td><span class="text-primary">contact</span></td>
+                    <td>VARCHAR(255)</td>
+                    <td>NULLABLE</td>
+                    <td>Nom de la personne de contact au sein de l'entreprise (facultatif)</td>
                 </tr>
                 <tr>
-                    <td>telephone</td>
-                    <td>VARCHAR</td>
-                    <td></td>
-                    <td>Numéro de téléphone du fournisseur</td>
+                    <td><span class="text-primary">telephone</span></td>
+                    <td>VARCHAR(50)</td>
+                    <td>NULLABLE</td>
+                    <td>Numéro de téléphone du fournisseur (facultatif)</td>
                 </tr>
                 <tr>
-                    <td>siret</td>
-                    <td>VARCHAR</td>
-                    <td></td>
-                    <td>SIRET de l'entreprise</td>
+                    <td><span class="text-primary">siret</span></td>
+                    <td>VARCHAR(14)</td>
+                    <td>NOT NULL</td>
+                    <td>Numéro SIRET du fournisseur (obligatoire pour les entreprises françaises)</td>
                 </tr>
                 <tr>
-                    <td>importateur</td>
+                    <td><span class="text-primary">importateur</span></td>
                     <td>BOOLEAN</td>
-                    <td></td>
-                    <td>Indique si l'entreprise est importateur</td>
+                    <td>NOT NULL</td>
+                    <td>Indique si le fournisseur est un importateur</td>
                 </tr>
                 <tr>
-                    <td>fabricant</td>
+                    <td><span class="text-primary">fabricant</span></td>
                     <td>BOOLEAN</td>
-                    <td></td>
-                    <td>Indique si l'entreprise est fabricant</td>
+                    <td>NOT NULL</td>
+                    <td>Indique si le fournisseur est un fabricant</td>
                 </tr>
                 <tr>
-                    <td>adresse_id</td>
-                    <td>INT</td>
-                    <td>FOREIGN KEY (Adresse)</td>
+                    <td><span class="text-primary">idAdresse</span></td>
+                    <td>INT (FOREIGN KEY)</td>
+                    <td>NOT NULL</td>
                     <td>Référence vers l'adresse du fournisseur</td>
                 </tr>
             </tbody>
         </table>
+
+        <h4 class="mt-4 text-primary">Explication des champs :</h4>
+        <ul>
+            <li><strong><span class="text-success">id (INT, PRIMARY KEY, NOT NULL)</span> :</strong> L'identifiant
+                unique pour chaque fournisseur, utilisé pour différencier chaque enregistrement.</li>
+            <li><strong><span class="text-success">nomEntreprise (VARCHAR(255), NOT NULL)</span> :</strong> Le nom de
+                l'entreprise du fournisseur, essentiel pour l'identification.</li>
+            <li><strong><span class="text-success">contact (VARCHAR(255), NULLABLE)</span> :</strong> Le nom de la
+                personne à contacter au sein de l'entreprise, facultatif, utile pour gérer la communication.</li>
+            <li><strong><span class="text-success">telephone (VARCHAR(50), NULLABLE)</span> :</strong> Le numéro de
+                téléphone du fournisseur, facultatif si l'information n'est pas disponible.</li>
+            <li><strong><span class="text-success">siret (VARCHAR(14), NOT NULL)</span> :</strong> Numéro SIRET
+                obligatoire pour toutes les entreprises françaises, utilisé pour l'identification légale.</li>
+            <li><strong><span class="text-success">importateur (BOOLEAN, NOT NULL)</span> :</strong> Ce champ indique si
+                le fournisseur est un importateur. La valeur booléenne est utilisée pour simplifier le traitement.</li>
+            <li><strong><span class="text-success">fabricant (BOOLEAN, NOT NULL)</span> :</strong> Indique si le
+                fournisseur est un fabricant, également sous forme booléenne.</li>
+            <li><strong><span class="text-success">idAdresse (INT, FOREIGN KEY, NOT NULL)</span> :</strong> Clé
+                étrangère vers la table des adresses, essentielle pour gérer la localisation des fournisseurs.</li>
+        </ul>
+
 
         <!-- Table Categorie -->
         <h3 class="mt-5">Table : Categorie</h3>
@@ -689,7 +708,7 @@
     <footer class="bg-dark text-white text-center py-3 mt-5 fixed-bottom">
         <p>© 2024 Clémence Boitelle</p>
     </footer>
-    
+
     <script type="text/javascript">
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({ pageLanguage: 'fr', includedLanguages: 'en,es,de,it' }, 'google_translate_element');
