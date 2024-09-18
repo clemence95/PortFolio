@@ -3,7 +3,6 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    padding-bottom: 70px;
 }
 
 /* Navbar fixed */
@@ -133,4 +132,8 @@ footer {
 /* Ajuster la taille */
 #google_translate_element {
     margin-top: 10px;
+}
+
+.table{
+    margin-bottom: 70px;
 }
